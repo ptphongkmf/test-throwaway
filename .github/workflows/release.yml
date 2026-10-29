@@ -23,5 +23,3 @@ jobs:
         with:
           config-path: .zephyr-release.json
           config-format: json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
