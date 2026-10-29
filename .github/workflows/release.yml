@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Zephyr Release
+        uses: ptphongkmf/zephyr-release@canary
+        with:
+          config-path: .zephyr-release.json
+          config-format: json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

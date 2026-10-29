@@ -1,0 +1,21 @@
+{
+  "release-flow": "review",
+  "workspace": {
+    "packages/core": {
+      "name": "core",
+      "title": "Core Library",
+      "version-files": [{ "path": "package.json", "selector": "$.version" }]
+    },
+    "packages/cli": {
+      "name": "cli",
+      "title": "Command Line Interface",
+      "version-files": [{ "path": "package.json", "selector": "$.version" }]
+    },
+    "packages/shared-utils": {
+      "name": "shared-utils",
+      "title": "Shared Utilities",
+      "version-files": [{ "path": "package.json", "selector": "$.version" }]
+    }
+  }
+}
+
